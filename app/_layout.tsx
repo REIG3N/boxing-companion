@@ -44,12 +44,11 @@ export default function RootLayout() {
   console.log('Rendering with auth state:', isAuthenticated);
 
   return (
-  <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+  <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
     <Stack>
       {isAuthenticated ? (
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       ) : (
-        // Changez simplement cette partie
         <Stack.Screen name="auth/index" options={{ headerShown: false }} />
       )}
     </Stack>
