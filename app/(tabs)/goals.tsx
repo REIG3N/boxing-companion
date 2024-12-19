@@ -100,23 +100,20 @@ export default function GoalScreen() {
           <SwotCard
             title="Strengths"
             items={mockData.swot.strengths}
-            borderColor={Colors.dark.primary}
+            borderColor={Colors.dark.primary} type={'strengths'}            
           />
           <SwotCard
             title="Weaknesses"
             items={mockData.swot.weaknesses}
-            borderColor={Colors.dark.secondary}
-          />
+            borderColor={Colors.dark.secondary} type={'weaknesses'}          />
           <SwotCard
             title="Opportunities"
             items={mockData.swot.opportunities}
-            borderColor={Colors.dark.primary}
-          />
+            borderColor={Colors.dark.primary} type={'opportunities'}          />
           <SwotCard
             title="Threats"
             items={mockData.swot.threats}
-            borderColor={Colors.dark.secondary}
-          />
+            borderColor={Colors.dark.secondary} type={'threats'}          />
         </View>
       </View>
 

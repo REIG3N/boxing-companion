@@ -77,8 +77,48 @@ const styles = StyleSheet.create({
   swotGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
     gap: 8,
+  },
+  swotQuadrant: {
+    flex: 1,
+    minWidth: '48%',
+    borderRadius: 8,
+    padding: 8,
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: `${Colors.dark.accent}33`,
+  },
+  swotLabel: {
+    fontSize: 14,
+    color: Colors.dark.accent,
+    marginBottom: 4,
+  },
+  swotContent: {
+    padding: 8,
+    borderLeftWidth: 3,
+    borderRadius: 4,
+    flex: 1,
+  },
+  strengthContent: {
+    backgroundColor: `${Colors.dark.primary}1A`,
+    borderLeftColor: Colors.dark.primary,
+  },
+  weaknessContent: {
+    backgroundColor: `${Colors.dark.secondary}1A`,
+    borderLeftColor: Colors.dark.secondary,
+  },
+  opportunityContent: {
+    backgroundColor: `${Colors.dark.primary}1A`,
+    borderLeftColor: Colors.dark.primary,
+  },
+  threatContent: {
+    backgroundColor: `${Colors.dark.secondary}1A`,
+    borderLeftColor: Colors.dark.secondary,
+  },
+  swotItem: {
+    fontSize: 12,
+    color: Colors.dark.text,
+    marginBottom: 4,
   },
   subGoalsCard: {
     backgroundColor: 'rgba(6, 8, 21, 0.9)',
@@ -156,30 +196,6 @@ const styles = StyleSheet.create({
   goalDate: {
     fontSize: 10,
     color: Colors.dark.accent,
-  },
-  swotQuadrant: {
-    backgroundColor: 'rgba(6, 8, 21, 0.9)',
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 16,
-    borderWidth: 1,
-    borderColor: `${Colors.dark.accent}33`,
-    width: '48%',
-  },
-  swotLabel: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: Colors.dark.text,
-    marginBottom: 8,
-  },
-  swotContent: {
-    paddingLeft: 8,
-    borderLeftWidth: 4,
-  },
-  swotItem: {
-    fontSize: 12,
-    color: Colors.dark.text,
-    marginBottom: 4,
   },
 });
 

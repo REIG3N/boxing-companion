@@ -11,6 +11,7 @@ export interface SwotCardProps {
   title: string;
   items: string[];
   borderColor: string;
+  type: 'strengths' | 'weaknesses' | 'opportunities' | 'threats';
 }
 
 export type SubGoalCardProps = SubGoal;
