@@ -28,7 +28,6 @@ export default function RootLayout() {
     // Test Firebase initialization
     const auth = getAuth();
     console.log('Firebase Auth State:', auth.currentUser);
-    
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       console.log('Auth State Changed:', user ? 'User logged in' : 'No user');
       setIsAuthenticated(!!user);
@@ -44,14 +43,21 @@ export default function RootLayout() {
   console.log('Rendering with auth state:', isAuthenticated);
 
   return (
-  <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
-    <Stack>
-      {isAuthenticated ? (
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      ) : (
-        <Stack.Screen name="auth/index" options={{ headerShown: false }} />
-      )}
-    </Stack>
-  </ThemeProvider>
-);
+    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme} >
+      <Stack screenOptions={{ headerShown: false }}>
+        {isAuthenticated ? (
+          <>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="(tabs)" />
+              <Stack.Screen name="settings" />
+              <Stack.Screen name="settings/profile" />
+              <Stack.Screen name="settings/about" />
+            </Stack>
+          </>
+        ) : (
+          <Stack.Screen name="auth/index" />
+        )}
+      </Stack>
+    </ThemeProvider>
+  );
 }
