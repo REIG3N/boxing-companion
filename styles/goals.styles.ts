@@ -197,6 +197,15 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: Colors.dark.accent,
   },
+  notesInput: {
+    height: 100,
+    borderColor: Colors.dark.secondary,
+    borderWidth: 1,
+    borderRadius: 8,
+    padding: 10,
+    color: Colors.dark.text,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
 });
 
 export default styles;

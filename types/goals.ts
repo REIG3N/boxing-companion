@@ -35,6 +35,7 @@ export interface SubGoal {
   title: string;
   instruction: string;
   longInstruction: string;
+  validationMetric: string;
   completionStatus: 'unknown' | 'inProgress' | 'completed';
 }
 

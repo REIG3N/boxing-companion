@@ -7,7 +7,7 @@ import SwotCard from '../../components/goals/SwotCard';
 import SubGoalCard from '../../components/goals/SubGoalCard';
 import styles from '../../styles/goals.styles';
 
-const mockData: GoalsData = {
+export const mockData: GoalsData = {
   mainGoal: {
     title: "Improve Head Movement & Counter-Punching",
     progress: 60,
@@ -26,6 +26,7 @@ const mockData: GoalsData = {
       title: "Defense Practice",
       instruction: "Hold center ring position. Only pivot on lead foot to evade.",
       longInstruction: "Stand in ring center. Imagine being surrounded - you can only pivot on your lead foot to avoid attacks. Find the most efficient angles of escape while staying balanced for counters.",
+      validationMetric: "Successfully evade combinations while maintaining position",
       completionStatus: 'unknown',
     },
     {
@@ -33,6 +34,7 @@ const mockData: GoalsData = {
       title: "Reaction Speed",
       instruction: "Touch lead hand to shoulder before any counter punch.",
       longInstruction: "Before throwing any counter, tap your lead hand to your rear shoulder. This creates a timing puzzle - find the sweet spot between speed and positioning. How fast can you reset while maintaining form?",
+      validationMetric: "Land counter within opponent's recovery window",
       completionStatus: 'inProgress',
     },
     {
@@ -40,6 +42,7 @@ const mockData: GoalsData = {
       title: "Combinations",
       instruction: "Every 3rd punch must be thrown while slipping.",
       longInstruction: "Count your punches. Every third strike must be thrown while performing a slip. This creates a rhythm puzzle that challenges both your coordination and tactical thinking.",
+      validationMetric: "Complete combination while avoiding return fire",
       completionStatus: 'completed',
     }
   ],
@@ -88,7 +91,7 @@ export default function GoalScreen() {
               title={subGoal.title}
               instruction={subGoal.instruction}
               longInstruction={subGoal.longInstruction}
-              completionStatus={subGoal.completionStatus} id={0}            />
+              completionStatus={subGoal.completionStatus} id={0} validationMetric={''}            />
           ))}
         </View>
       </View>
